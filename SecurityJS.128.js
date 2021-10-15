@@ -1,6 +1,7 @@
 /*
 * SecurityJS.128 bit minified file
-* License MIT Copyright (c) https://github.com/Parking-Master/SecurityJS.128/blob/main/LICENSE
+* Copyright (c) 2021 Parking-Master
+*  License MIT https://github.com/Parking-Master/SecurityJS.128/blob/main/LICENSE.md
 */
 var debug_wrapper = document.createElement("div");
 const valid = 'valid';
