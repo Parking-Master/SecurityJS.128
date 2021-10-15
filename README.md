@@ -86,7 +86,7 @@ securityjs.generate(128);
 ```
 256 bit keys:
 ```
-securityjs.generate(128);
+securityjs.generate(256);
 // Output: Generated 256 bit key (max length approximately 9985 objects in 2ms)
 // M60JiJrCP7TacP-sSrvQDbYyyN7ZBKXIhIJr6cvNYFZStEtP0TdGE:OnAk_nDDWGCW_LK5wyFHJIGFA9VeTSVixUaLigsdXY-m60lXTFXKFgrA-GDTmY2G7ZoCIH590dhEwg:vFeb3lJwGNEPIP0A1QSAQLaVpuXyqU_A0rg8GiW-tpK6W79Kqt4EU7YJuSWuh1wtORYCCmDrTJZDFX1V7OX9PQgNRiKcervzX5J9KJW1-tUOrUDj6ErlYBNvkSW
 ```
