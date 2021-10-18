@@ -21,6 +21,11 @@ _or_
 _you'll want to get the `@latest` version for bug fixes and such._
 
 **Or download the file** [here]().
+
+Once SecurityJS is added, you'll see this in the console if it is active:
+```
+🛈 SecurityJS.128 active
+```
 ### How does it work?
 First, SecurityJS connects to a self-hosted database where it can store data like SSL, site verification, etc.<br>
 To get if the site is verified/has SSL, it does little things 1-by-1 and all together it adds up. Just like math,<br>
@@ -28,7 +33,7 @@ To get to 100 just by adding 1, You would have to add 1, 100 times. Same with th
 Site encryption type, visitors, protocol, and eventually it adds up like this: `'valid' or 'invalid'?`;
 <br>
 <br>
-Aside from how it works, SecurityJS has many other APIs too like window.secureStorage, frame clickjacking defense, password-to-file accesser, etc. You can about the APIs it below, or in the [documentation]().
+Aside from how it works, SecurityJS has many other APIs too like window.secureStorage, frame clickjacking defense, file restricter, etc. You can about the APIs below, or in the [documentation]().
 
 ### Why you should have it
 Because, SecurityJS is a powerful JS library that comes with 128 bit encryption, and is completely free, it wouldn't hurt to embed with 1 line of code.
@@ -70,7 +75,7 @@ secureStorage.getItem(item, value);
 ```
 Make sure to keep it in a local `<anonymous>` function so the key is private.
 ### Key generators
-In the [basic SecurityJS](), the most simple way to generate a random key is `generateKey()`
+In the [basic SecurityJS](https://github.com/Parking-Master/Security.js), the most simple way to generate a random key is `generateKey()`
 ```
 securityjs.generateKey();
 ```
@@ -121,9 +126,9 @@ _or_
 ```
 securityjs.auth('password', 'myuniquepasscode1145');
 ```
-Accessing your authorized file ends up like this:
+Entering your authorized file ends up like this:
 > Enter your passcode to access this file:<br>
-> <ul><kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</kbd><br><ul><kbd>OK</kbd>&nbsp;&nbsp;<kbd>Cancel</kbd><br>
+> <ul><kbd>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</kbd><br><ul><kbd>OK</kbd>&nbsp;&nbsp;<kbd>Cancel</kbd><br></ul>
 SecurityJS `restrict()` function works the same as the auth function:
 ```
 securityjs.restrict(type, value);
