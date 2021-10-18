@@ -39,7 +39,21 @@ Aside from how it works, SecurityJS has many other APIs too like window.secureSt
 Because, SecurityJS is a powerful JS library that comes with 128 bit encryption, and is completely free, it wouldn't hurt to embed with 1 line of code.
 
 ## Documentation
-### X-Frame-Options
+> ### SecurityJS `onexecute()`
+Override the default trigger function for when loading is blocked, URI is malformed, etc.
+###### Syntax (JavaScript)
+```
+securityjs.onexecute = function() {
+  // Do what you want here...
+  alert('SecurityJS is the greatest!');
+};
+```
+##### Output:
+<kbd>https://www.example.com/?javascript=void(0)</kbd>
+> SecurityJS is the greatest!<br>
+> <ul><kbd>OK</kbd></ul>
+
+> ### X-Frame-Options
 ##### HTML (meta tag)
 (`deny` for all, `sameorigin` for domain only)
 ###### index.html
@@ -58,7 +72,7 @@ _and_
 ```
 <script type="application/json" src="./data.json"></script>
 ```
-### window.secureStorage API
+> ### window.secureStorage API
 SecureStorage is a secure way of locking up localStorage and disabling viewing any securestorage/localstorage items.
 ```
 (async function(){
@@ -74,7 +88,7 @@ secureStorage.getItem(item, value);
 })();
 ```
 Make sure to keep it in a local `<anonymous>` function so the key is private.
-### Key generators
+> ### Key generators
 In the [basic SecurityJS](https://github.com/Parking-Master/Security.js), the most simple way to generate a random key is `generateKey()`
 ```
 securityjs.generateKey();
@@ -95,7 +109,7 @@ securityjs.generate(256);
 // Output: Generated 256 bit key (max length approximately 9985 objects in 2ms)
 // M60JiJrCP7TacP-sSrvQDbYyyN7ZBKXIhIJr6cvNYFZStEtP0TdGE:OnAk_nDDWGCW_LK5wyFHJIGFA9VeTSVixUaLigsdXY-m60lXTFXKFgrA-GDTmY2G7ZoCIH590dhEwg:vFeb3lJwGNEPIP0A1QSAQLaVpuXyqU_A0rg8GiW-tpK6W79Kqt4EU7YJuSWuh1wtORYCCmDrTJZDFX1V7OX9PQgNRiKcervzX5J9KJW1-tUOrUDj6ErlYBNvkSW
 ```
-### TurboClear
+> ### TurboClear
 TurboClear is an API that lets you clear cache, history, and cookies.
 ```
 securityjs.TurboClear(true);
@@ -113,7 +127,7 @@ To clear cookies, use `cookies`:
 ```
 securityjs.TurboClear(cookies);
 ```
-### File restricter
+> ### File restricter
 You can only access files using an IPv4 address, or unique password using this API
 ```
 securityjs.auth('ip', '8.8.8.8');
