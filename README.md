@@ -33,7 +33,7 @@ To get to 100 just by adding 1, You would have to add 1, 100 times. Same with th
 Site encryption type, visitors, protocol, and eventually it adds up like this: `'valid' or 'invalid'?`;
 <br>
 <br>
-Aside from how it works, SecurityJS has many other APIs too like window.secureStorage, frame clickjacking defense, file restricter, etc. You can about the APIs below, or in the [documentation]().
+Aside from how it works, SecurityJS has many other APIs too like window.secureStorage, frame clickjacking defense, file restricter, etc. You can learn more about the APIs below, or in the [documentation]().
 
 ### Why you should have it
 Because, SecurityJS is a powerful JS library that comes with 128 bit encryption, and is completely free, it wouldn't hurt to embed with 1 line of code.
