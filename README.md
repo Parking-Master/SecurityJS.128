@@ -5,9 +5,9 @@
 | [File-accesser]() |
 | [Clickjacking defense]() |
 ## Welcome to SecurityJS<sup>128</sup>
-(**NOTE** SecurityJS.[128/256] is only available with sites that have <kbd>HTTPS</kbd> protocol)<hr>
+(**Disclaimer** SecurityJS.[128/256] is only available on sites encrypted with <kbd>[HTTPS](https://en.wikipedia.org/wiki/HTTPS)</kbd>)<hr>
 SecurityJS Is a JavaScript library (downloadable/embeddable) that can protect your site with a single file.<br>
-This library comes in over 2000 lines of code, but the [minified version]() is much smaller.
+This library comes in over 2000 lines of code, but the [minified version](https://parking-master.github.io/SecurityJS.128/download.html?download=js) is much smaller.
 
 ### Installing it
 Firstly, you can also get it by [CDN](https://www.jsdelivr.com/):
@@ -20,7 +20,16 @@ _or_
 ```
 _you'll want to get the `@latest` version for bug fixes and such._
 
-**Or download the file** [here]().
+- [Download the full file](https://parking-master.github.io/SecurityJS.128/download.html?download=min)<br>
+- [Download the minified file](https://parking-master.github.io/SecurityJS.128/download.html?download=js)<br>
+- [Download the package](https://github.com/Parking-Master/SecurityJS.128/releases)<br>
+
+You can [also](https://github.com/Parking-Master/SecurityJS.128/packages/1071332) install it with NPM:
+```
+npm install parking-master/securityjs.128
+```
+
+<hr>
 
 Once SecurityJS is added, you'll see this in the console if it is active:
 ```
@@ -36,10 +45,10 @@ Site encryption type, visitors, protocol, and eventually it adds up like this: `
 Aside from how it works, SecurityJS has many other APIs too like window.secureStorage, frame clickjacking defense, file restricter, etc. You can learn more about the APIs below, or in the [documentation]().
 
 ### Why you should have it
-Because, SecurityJS is a powerful JS library that comes with 128 bit encryption, and is completely free, it wouldn't hurt to embed with 1 line of code.
+Because, SecurityJS is a powerful JS library that comes with 128 bit encryption, and is completely free, it wouldn't hurt to embed with 1 line of code or install it.
 
 ## Documentation
-> ### SecurityJS `onexecute()`
+### SecurityJS `onexecute()`
 Override the default trigger function for when loading is blocked, URI is malformed, etc.
 ###### Syntax (JavaScript)
 ```
@@ -53,7 +62,7 @@ securityjs.onexecute = function() {
 > SecurityJS is the greatest!<br>
 > <ul><kbd>OK</kbd></ul>
 
-> ### X-Frame-Options
+### X-Frame-Options
 ##### HTML (meta tag)
 (`deny` for all, `sameorigin` for domain only)
 ###### index.html
@@ -72,7 +81,7 @@ _and_
 ```
 <script type="application/json" src="./data.json"></script>
 ```
-> ### window.secureStorage API
+### window.secureStorage API
 SecureStorage is a secure way of locking up localStorage and disabling viewing any securestorage/localstorage items.
 ```
 (async function(){
@@ -88,7 +97,7 @@ secureStorage.getItem(item, value);
 })();
 ```
 Make sure to keep it in a local `<anonymous>` function so the key is private.
-> ### Key generators
+### Key generators
 In the [basic SecurityJS](https://github.com/Parking-Master/Security.js), the most simple way to generate a random key is `generateKey()`
 ```
 securityjs.generateKey();
@@ -109,7 +118,7 @@ securityjs.generate(256);
 // Output: Generated 256 bit key (max length approximately 9985 objects in 2ms)
 // M60JiJrCP7TacP-sSrvQDbYyyN7ZBKXIhIJr6cvNYFZStEtP0TdGE:OnAk_nDDWGCW_LK5wyFHJIGFA9VeTSVixUaLigsdXY-m60lXTFXKFgrA-GDTmY2G7ZoCIH590dhEwg:vFeb3lJwGNEPIP0A1QSAQLaVpuXyqU_A0rg8GiW-tpK6W79Kqt4EU7YJuSWuh1wtORYCCmDrTJZDFX1V7OX9PQgNRiKcervzX5J9KJW1-tUOrUDj6ErlYBNvkSW
 ```
-> ### TurboClear
+### TurboClear
 TurboClear is an API that lets you clear cache, history, and cookies.
 ```
 securityjs.TurboClear(true);
@@ -127,7 +136,7 @@ To clear cookies, use `cookies`:
 ```
 securityjs.TurboClear(cookies);
 ```
-> ### File restricter
+### File restricter
 You can only access files using an IPv4 address, or unique password using this API
 ```
 securityjs.auth('ip', '8.8.8.8');
