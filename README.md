@@ -1,9 +1,9 @@
 # :key: SecurityJS.128
 | API |
 |------|
-| [SecureStorage]() |
-| [File-accesser]() |
-| [Clickjacking defense]() |
+| [SecureStorage] |
+| [File-accesser] |
+| [Clickjacking defense] |
 ## Welcome to SecurityJS<sup>128</sup>
 (**Disclaimer** SecurityJS.[128/256] is only available on sites encrypted with <kbd>[HTTPS](https://en.wikipedia.org/wiki/HTTPS)</kbd>)<hr>
 SecurityJS Is a JavaScript library (downloadable/embeddable) that can protect your site with a single file.<br>
