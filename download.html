@@ -6,9 +6,9 @@
 var uri = new URLSearchParams(location.search).get('download');
 if (uri) {
   if (uri == 'min') {
-    download('SecurityJS.128/SecurityJS.128.js');
+    download('/SecurityJS.128/SecurityJS.128.js');
   } else if (uri == 'js') {
-    download('SecurityJS.128/SecurityJS.128.min.js');
+    download('/SecurityJS.128/SecurityJS.128.min.js');
   }
 } else {
   throw new Error('You must provide a download type (min.js/.js)');
