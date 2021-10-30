@@ -1,0 +1,23 @@
+{
+  "name": "@parking-master/securityjs.128",
+  "version": "1.0.0",
+  "description": "World's first JavaScript libarary for securing web-pages client-side.",
+  "main": "SecurityJS.128.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parking-Master/SecurityJS.128.git"
+  },
+  "keywords": [
+    "security",
+    "javascript"
+  ],
+  "author": "Parking Master",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Parking-Master/SecurityJS.128/issues"
+  },
+  "homepage": "https://github.com/Parking-Master/SecurityJS.128#readme"
+}
