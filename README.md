@@ -11,12 +11,12 @@ This library comes in over 2000 lines of code, but the [minified version](https:
 
 ### Installing it
 Firstly, you can also get it by [CDN](https://www.jsdelivr.com/):
-```
-<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Parking-Master/SecurityJS.128@latest/SecurityJS.128.js' trust='true' async defer></script>
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Parking-Master/SecurityJS.128@latest/SecurityJS.128.js" data-trust="true" async="" defer=""></script>
 ```
 _or_
-```
-<script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Parking-Master/SecurityJS.128@latest/SecurityJS.128.min.js' trust='true' async defer></script>
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/Parking-Master/SecurityJS.128@latest/SecurityJS.128.min.js" data-trust="true" async="" defer=""></script>
 ```
 _you'll want to get the `@latest` version for bug fixes and such._
 
