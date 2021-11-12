@@ -1,8 +1,10 @@
 /* 
- * SecurityJS.128 bit minified file
- * Copyright (c) 2021 Parking Master
- * License MIT https://github.com/Parking-Master/SecurityJS.128/blob/main/LICENSE
- */
+  * SecurityJS.128-bit file
+  * @license
+  * Copyright (c) 2021 Parking Master / (SecurityJS.128)
+  * Licensed under the MIT License (https://mit-license.org)
+  * More licensing information at https://github.com/Parking-Master/SecurityJS.128/blob/main/LICENSE.md
+*/
 var lsGetItem, lsSetItem, ssGetItem, ssSetItem, scGetItem, scSetItem, cookies = "[object ObjectCookieIdentifier]",
     cache = "[object ObjectCacheIdentifier]",
     debug_wrapper = document.createElement("div");
