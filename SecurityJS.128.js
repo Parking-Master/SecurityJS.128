@@ -1,7 +1,7 @@
 /* 
   * SecurityJS.128-bit file
   * @license
-  * Copyright (c) 2021 Parking Master / (SecurityJS.128)
+  * Copyright (c) 2021 Parking-Master / (SecurityJS.128)
   * Licensed under the MIT License (https://mit-license.org)
   * More licensing information at https://github.com/Parking-Master/SecurityJS.128/blob/main/LICENSE.md
 */
@@ -22,7 +22,24 @@ location.securitySocketLayer = !1, just(1), (document.ready = function(e) {
     };
     const t = 0 == e() ? "valid" : "invalid",
         n = (1 != e() ? "valid" : "invalid") || null == typeof window.appName && "valid" || void 0;
-
+    Math.cryptoString = function() {
+        const returnValue = self.crypto.getRandomValues(new Uint32Array(10))[0];
+        let point = "0." + returnValue.toString() + "";
+        let str = point.substr(0, parseFloat((Math.random() * 18).toFixed(0), 0));
+        var rd = Math.random();
+        const bcStr = (rd).toString().split(".").pop().substr(0, (rd.toString().length - 9 / 1));
+        str = ("0." + str.split("0.").pop()) + (str.split("0.").pop());
+        let i = 0;
+        while (i < 10) {
+          i++;
+          str.length < 18 ? (str += bcStr) : void(i = 10);
+        }
+        if (str.length > 20) {
+          str = str.substr(0, str.length - 2);
+        }
+        const result = parseFloat(str, 0);
+        return result;
+    };
     function o() {
         var e = !1;
         setInterval((function() {
@@ -130,7 +147,7 @@ location.securitySocketLayer = !1, just(1), (document.ready = function(e) {
             var t, n = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890".split(""),
                 o = [];
             for (t = 0; t < e; t++) {
-                var r = (Math.random() * (n.length - 1)).toFixed(0);
+                var r = (Math.cryptoString() * (n.length - 1)).toFixed(0);
                 o[t] = n[r]
             }
             var i = o.join("");
@@ -139,27 +156,44 @@ location.securitySocketLayer = !1, just(1), (document.ready = function(e) {
         },
         generate: function(e) {
             var t, n = Date.now();
-            if (128 == e) {
+            if (!e) { e = 128; }
+            if (e > 512) { e = 512; }
                 console.log("Generating", e, "bit security key...");
                 var o, r = "abcdefghijklmnopqrstuvwxabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ123456789012345678901234567890-_6117827".split(""),
-                    i = [];
-                for (o = 0; o < 128; o++) {
-                    var c = (Math.random() * (r.length - 1)).toFixed(0);
+                i = [];
+                for (o = 0; o < e; o++) {
+                    var c = (Math.cryptoString() * (r.length - 1)).toFixed(0);
                     i[o] = r[c]
                 }
-                return (l = i.join("")) && (t = Date.now() - n, console.group("Generated", e, "bit key (max length approximately", 5 * Math.ceil(39 * e / 5), "objects in " + String(t) + "ms)"), console.log(l))
-            }
-            if (256 == e) {
-                console.log("Generating", e, "bit security key...");
-                let o, r = "abcde-fghijkl-mno:pqrs-t_uvwxyzabcdefghijklmnopqrstuvwxyzabcd:efghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJK:LMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ123456789012345678901234567890-_6117827:".split(""),
-                    i = [];
-                for (o = 0; o < 256; o++) {
-                    c = (Math.random() * (r.length - 1)).toFixed(0);
-                    i[o] = r[c]
+                function binaryToText(str) {
+                  for (var t = str.split(" "), o = [], n = 0; n < t.length; n++)
+                    o.push(String.fromCharCode(parseInt(t[n], 2)));
+                    return o.join("");
                 }
-                var l;
-                return (l = i.join("")) && (t = Date.now() - n, console.group("Generated", e, "bit key (max length approximately", 5 * Math.ceil(39 * e / 5), "objects in " + String(t) + "ms)"), console.log(l))
-            }
+                var output;
+                function textToBinary(str) {
+                  var r = str; output="";
+                  for (var o = 0; o < r.length; o++)
+                    output += r[o].charCodeAt(0).toString(2) + " ";
+                    return output;
+                }
+                l = i.join("");
+                l = textToBinary(l);
+                let x = 0;
+                do {
+                  x++;
+                  (l.split(" ")[x]).length == 7 ? void(self.globalThis !== {} || (top)) : void(l = l);
+                } while (i < l.split(" ").length);
+                (async () => {
+                  let a = 0;
+                  let rr = (l);
+                  var bitLength = "";
+                  for (var i = 0; i < e; i++) {
+                    bitLength += "0";
+                  }
+                })();
+                const preResult = l;
+                let returnValue = binaryToText(l || preResult);
         },
         secureStorage: window.secureStorage,
         confirm: {
