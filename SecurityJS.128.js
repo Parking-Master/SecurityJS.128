@@ -11,7 +11,7 @@ var lsGetItem, lsSetItem, ssGetItem, ssSetItem, scGetItem, scSetItem, cookies = 
 const valid = "valid";
 var m, securityjs, useSafetyProtocol = true;
 
-if (location.hostname.includes("localhost") useSafetyProtocol = false, console.warn("Warning: Not using default `useSafetyProtocol` because the current site (http://localhost) is a locaal website.");
+if (location.hostname.includes("localhost")) useSafetyProtocol = false, console.warn("Warning: Not using default `useSafetyProtocol` because the current site (http://localhost) is a local website");
 
 function just(e) {
     return e || ""
