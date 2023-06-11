@@ -9,7 +9,9 @@ var lsGetItem, lsSetItem, ssGetItem, ssSetItem, scGetItem, scSetItem, cookies = 
     cache = "[object ObjectCacheIdentifier]",
     debug_wrapper = document.createElement("div");
 const valid = "valid";
-var m, securityjs;
+var m, securityjs, useSafetyProtocol = true;
+
+if (location.hostname.includes("localhost") useSafetyProtocol = false, console.warn("Warning: Not using default `useSafetyProtocol` because the current site (http://localhost) is a locaal website.");
 
 function just(e) {
     return e || ""
@@ -246,7 +248,7 @@ location.securitySocketLayer = !1, just(1), (document.ready = function(e) {
             sessionStorage.setItem("objectSecurityjsKey128Bit", e)
         }
     }, o();
-    if ("http:" == location.protocol) throw null != securityjs && (securityjs = void 0), new class {
+    if ("http:" == location.protocol) throw null != securityjs && useSafetyProtocol && (securityjs = void 0), new class {
         constructor(e) {
             var t = "undefined" == e || null == e ? " " : e;
             console.error("Uncaught SecurityError: " + t)
